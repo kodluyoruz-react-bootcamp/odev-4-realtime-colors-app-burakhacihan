@@ -1,0 +1,41 @@
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-size:22px;
+  color:#000;
+  text-shadow: 0px 1px 3px #d2d2d2;
+}
+
+ul{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.App {
+  text-align: center;
+  user-select: none;
+}
+
+.sketch-picker, .photoshop-picker  {
+  margin: 30px auto;
+}
+
+#root > div > div > div.flexbox-fix > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(3) > div:nth-child(1), #root > div > div > div.flexbox-fix > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(3) > div:nth-child(2), #root > div > div > div.flexbox-fix > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(3) > div:nth-child(3), #root > div > div > div.flexbox-fix > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(3) > div:nth-child(4), #root > div > div > div.flexbox-fix > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(3) > div:nth-child(5), #root > div > div > div.flexbox-fix > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(3) > div:nth-child(6), #root > div > div > div.flexbox-fix > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(3) > div:nth-child(7), #root > div > div > div.flexbox-fix > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(3) > div:nth-child(10) {
+  display: none;
+}
+
+.flexbox-fix{
+  padding-bottom: 11px !important;
+}
+
+.inputName{
+  padding: 18px;
+  width: 270px;
+  outline: none;
+  text-align: center;
+  font-size: 15px;
+  margin: 40px auto;
+}
