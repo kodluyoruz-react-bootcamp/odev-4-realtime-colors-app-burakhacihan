@@ -11,11 +11,11 @@ function UserLogin() {
 
     const formSubmitHandle = (e) =>{
         e.preventDefault();
-        setNameContext(name);
-        addUser(name);
-        setUsers([...users,{name:name}]);
-        sessionInfo((userSession) => { setSessionid(userSession) });
-        userList((users) => { setUsers([...users]); });
+        //setNameContext(name);
+        //addUser(name);
+        //setUsers([...users,{name:name}]);
+        //sessionInfo((userSession) => { setSessionid(userSession) });
+        //userList((users) => { setUsers([...users]); });
     }
 
     return (

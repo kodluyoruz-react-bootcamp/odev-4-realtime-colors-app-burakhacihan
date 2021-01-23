@@ -16,7 +16,7 @@ function Wrapper() {
 
     const colorChangeConfirm = () => {
         document.body.style.background = color.background;
-        sendColor(color.background,sessionid);
+        sendColor(color.background);
     }
 
     useEffect(() => {
@@ -34,13 +34,8 @@ function Wrapper() {
 
     return (
         <>
-        {
-            nameContext && (
-                <PhotoshopPicker header="Real-Time Background Changer" 
-                         color={color.background} 
-                         onAccept={colorChangeConfirm} 
-                         onChangeComplete={changeColorHandler} />
-            )
+        {   
+            <PhotoshopPicker header="Real-Time Background Changer" color={color.background} onAccept={colorChangeConfirm} onChangeComplete={changeColorHandler} />
         }
         <div>
             <strong>Mevcut Renk HEX Kodu: </strong> {color.background}

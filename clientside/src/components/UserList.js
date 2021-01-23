@@ -8,9 +8,9 @@ function UserList() {
     const { users,setUsers } = useContext(SkinContext);
 
     useEffect(() => {
-        userList((list) => {
-            setUsers(list);
-        })
+        // userList((list) => {
+        //     setUsers(list);
+        // })
     },[users,setUsers]);
 
     return (
