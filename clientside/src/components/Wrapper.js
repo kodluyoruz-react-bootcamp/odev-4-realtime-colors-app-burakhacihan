@@ -2,11 +2,11 @@
 import {useEffect, useContext} from 'react';
 import {PhotoshopPicker} from 'react-color';
 import SkinContext from '../context/SkinContext';
-import {initSocket, sendColor,getColor} from '../Services/SocketService';
+import {initSocket,disconnectSocket, sendColor,getColor} from '../Services/SocketService';
 
 function Wrapper() {
 
-    const { color, setColor, nameContext, sessionid } = useContext(SkinContext);
+    const { color, setColor } = useContext(SkinContext);
 
     const changeColorHandler = (color) => {
         setColor({
@@ -39,8 +39,6 @@ function Wrapper() {
         }
         <div>
             <strong>Mevcut Renk HEX Kodu: </strong> {color.background}
-            <br />
-            <strong>Rengi Değiştiren: </strong> {color.changerName}
         </div>
         </>
     )

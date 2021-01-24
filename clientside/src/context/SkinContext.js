@@ -9,21 +9,9 @@ export const SkinProvider = ({ children }) => {
 		changerName: 'Private'
 	});
 
-	const [nameContext,setNameContext] = useState("");
-
-	const [users,setUsers] = useState([]);
-
-	const [sessionid,setSessionid] = useState("");
-
 	const values = {
 		color,
-		setColor,
-		nameContext,
-		setNameContext,
-		users,
-		setUsers,
-		sessionid,
-		setSessionid
+		setColor
 	};
 
 	return <SkinContext.Provider value={values}>{children}</SkinContext.Provider>;

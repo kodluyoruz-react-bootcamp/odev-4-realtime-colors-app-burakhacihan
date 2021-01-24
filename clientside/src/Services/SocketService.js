@@ -4,26 +4,14 @@ let socket;
 
 export const initSocket = () => {
 	socket = io('http://localhost:3001', {
-		transports: ['websocket']
+		transports: ['websocket','polling']
 	});
 };
 
-export const addUser = (name) => {
-	socket.emit('joined', name);
-}
-
-export const userList = (callback) => {
-	socket.on("loginlist",(res) => {
-		callback(res);
-	});
-}
-
-export const sessionInfo = (callback) => {
-	if(!socket) return true;
-	socket.on("socketinfo",(res) => {
-		callback(res);
-	});
-}
+export const disconnectSocket = () => {
+	console.log('Disconnecting...');
+	if (socket) socket.disconnect();
+};
 
 export const sendColor = (color) => {
 	socket.emit('send-color',color);
@@ -34,7 +22,3 @@ export const getColor = (callback) => {
 		callback(color);
 	})
 }
-
-export const disconnectSocket = () => {
-	if (socket) socket.disconnect();
-};
