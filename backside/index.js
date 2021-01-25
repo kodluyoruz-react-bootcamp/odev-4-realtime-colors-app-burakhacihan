@@ -3,23 +3,24 @@ const http = require("http").Server(app);
 const io = require("socket.io")(http);
 
 app.get("/", (req, res) => {
-	res.end("Hello Color Changer");
+    res.end("Hello Color Changer");
 });
 
 io.on('connection', (socket) => {
 
-    socket.on("send-color",(getColor) => {
+    socket.on("send-color",(getColor,name) => {
         socket.broadcast.emit("selected-color",{
             background: getColor,
+            changerName: name
         });
     });
 
     socket.on('disconnect', function () {
-        console.log("biri oturumu kapattı.");
+        console.log("Birileri şimdi aramızdan ayrıldı.");
     }); 
 
 });
 
-http.listen(3001, () => {
-	console.log("listening on *:3001");
+http.listen(process.env.PORT || 3000, () => {
+	console.log("listening on *:" + process.env.PORT);
 }); 
